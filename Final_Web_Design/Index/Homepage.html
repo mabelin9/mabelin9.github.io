@@ -3,197 +3,275 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Website final</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <style type="text/css">
-
-      .nav-item {
-        font-family: Georgia,Arial,sans-serif;
-        text-align: center;
-        background-color: black;
-
-
-      }
-      a.nav-link {
-        color: #FA0500;
-      }
-      a.nav-link:hover {
-        color: #2A0007;
-      }
-      .searcher
-      {
-        font-family: Georgia,arial,sans-serif;
-        text-align: center;
-
-      }
-      .Top
-      {
-        background-color: black;
-        container: center;
-              }
-
-      .btn:hover {
-        color: black;
-        background-color: black;
-        border-color: black;
-      }      
-      .btn
-      {
-        color: black;
-        background-color: black;
-        border-color: black;
-      }
-      .btn-primary 
-      {
-        color: black;
-        background-color: ;
-      }
-      .options
-      {
-        background-color: black;
-        font-family: Georgia,arial,sans-serif;
-      }
-      .deals
-      {
-        margin-top: 20px;
-        margin-block-start: 0em;
-        padding: 20px;
-
+    <meta name="description" content="A personal introduction and a little about what I'm interested in.">
+    <title>About Me | Your Name</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --background: #090909;
+        --surface: #141111;
+        --text: #f5eeee;
+        --muted: #c3b4b4;
+        --accent: #bd514b;
+        --border: #50302e;
       }
 
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--background);
+        color: var(--text);
+        font-family: Georgia, "Times New Roman", serif;
+        line-height: 1.65;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 4px;
+      }
+
+      .site-header,
+      main,
+      .site-footer {
+        width: min(100% - 2rem, 68rem);
+        margin-inline: auto;
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1.5rem;
+        padding-block: 1.25rem;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .brand {
+        color: var(--accent);
+        font-family: "Courier New", monospace;
+        font-size: 0.9rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.25rem;
+      }
+
+      nav a {
+        color: var(--muted);
+        font-size: 0.95rem;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.25em;
+      }
+
+      nav a:hover {
+        color: var(--text);
+      }
+
+      .hero {
+        padding-block: clamp(4rem, 12vw, 8rem);
+      }
+
+      .eyebrow {
+        margin: 0 0 1rem;
+        color: var(--accent);
+        font-family: "Courier New", monospace;
+        font-size: 0.82rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      p {
+        margin-top: 0;
+      }
+
+      h1 {
+        max-width: 13ch;
+        margin-bottom: 1.25rem;
+        font-size: clamp(3rem, 9vw, 6.5rem);
+        font-weight: 400;
+        letter-spacing: -0.06em;
+        line-height: 0.98;
+      }
+
+      h1 span {
+        color: var(--accent);
+      }
+
+      .hero-copy {
+        max-width: 42rem;
+        margin-bottom: 2rem;
+        color: var(--muted);
+        font-size: clamp(1.05rem, 2vw, 1.3rem);
+      }
+
+      .text-link {
+        display: inline-block;
+        color: var(--text);
+        text-decoration-color: var(--accent);
+        text-decoration-thickness: 2px;
+        text-underline-offset: 0.35em;
+      }
+
+      section {
+        padding-block: 3.5rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .section-grid {
+        display: grid;
+        grid-template-columns: minmax(10rem, 0.8fr) minmax(0, 1.6fr);
+        gap: 2rem;
+      }
+
+      h2 {
+        margin-bottom: 0.75rem;
+        font-size: clamp(1.7rem, 4vw, 2.5rem);
+        font-weight: 400;
+        letter-spacing: -0.03em;
+      }
+
+      .section-label {
+        margin: 0;
+        color: var(--accent);
+        font-family: "Courier New", monospace;
+        font-size: 0.8rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .section-copy {
+        max-width: 42rem;
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .prompt-card {
+        padding: 1.5rem;
+        border: 1px dotted var(--border);
+        background: var(--surface);
+      }
+
+      .prompt-card p:last-child {
+        margin-bottom: 0;
+      }
+
+      .prompt {
+        color: var(--text);
+      }
+
+      .site-footer {
+        padding-block: 1.5rem 2rem;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 600px) {
+        .site-header {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        nav {
+          gap: 0.75rem 1rem;
+        }
+
+        .section-grid {
+          grid-template-columns: 1fr;
+          gap: 0.75rem;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+      }
     </style>
   </head>
-
-  <!-- Header -->
   <body>
+    <header class="site-header">
+      <a class="brand" href="#top">About me</a>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#now">Right now</a>
+      </nav>
+    </header>
 
-
-<nav class="navbar bg-body-tertiary">
-  <div class="container-fluid Top">
-        <a class="navbar-brand" href="homepage.html">
-      <img src="images/logo.png" alt="Logo" width="70em" height="50em" class="d-inline-block align-text-top">
-      
-    </a>
-    <form class="d-flex searcher" role="search">
-      <button class="btn btn-outline-success" type="submit"> 
-      <img src="images/searcher.jpg" type="submi" width="40em" height="40em">
-    </button> 
-     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-    </form>
-
-        <div class="d-grid gap-2 d-md-block">
-        <button class="btn btn-primary" type="button">
-          <img src="images/user.jpg" width="40em" height="40em">
-        </button>
-        <button class="btn btn-primary" type="button">
-          <img src="images/cart.jpg" width="40em" height="40em">
-        </button>
-  </div>
-
-</nav>
-
-<!--Buttons -->
-
- <ul class="nav justify-content-center options" >
-  <li class="nav-item col">
-    <a class="nav-link" aria-current="page" href="products.html">Products</a>
-  </li>
-  <li class="nav-item col">
-    <a class="nav-link" href="#">Pc Parts</a>
-  </li>
-  <li class="nav-item col">
-    <a class="nav-link" href="#">Services</a>
-  </li>
-  <li class="nav-item col">
-    <a class="nav-link " aria-disabled="true">Top Deals</a>
-    <li class="nav-item col">
-      <a class="nav-link"> Help </a>
-    </li>
-  </li>
-`</ul>
-
-  <!--mid part-->
-
-
-  <div id="carouselExampleIndicators" class="carousel slide">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/part_1.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="images/part_2.jpg" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="images/part_3.jpg" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-  
-  <!--bottom part-->
-
-    <div class="row deals">
-     <div class="col-sm-6 mb-3 mb-sm-0">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Deals</h5>
-        <img src="images/motherboard.jpg" width="40em" height="300em" class="card-img-top">
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+    <main id="top">
+      <div class="hero">
+        <p class="eyebrow">A little introduction</p>
+        <h1>Hi, I'm <span>[Your Name].</span></h1>
+        <p class="hero-copy">
+          Welcome to my corner of the web. I'm a [student, creator, or whatever
+          describes you] with a love for [something you're curious about].
+          This is where I share a little about myself and the things that matter to me.
+        </p>
+        <a class="text-link" href="#about">Get to know me</a>
       </div>
-      </div>
-      </div>
-     <div class="col-sm-6 mb-3 mb-sm-0">
-        <div class="card">
-         <div class="card-body">
-        <h5 class="card-title">Deals</h5>
-        <img src="images/pc_case.jpg" width="40em" height="300em" class="card-img-top">
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-     </div>
-    </div>
 
-    <!-- footer -->
-
-    <div class="container-fluid">
-      <div class="row">
-        <div class="container border">
-          <div class="row">
-            <div class="row justify-content-start">
-            <div class="col-2">
-              
-            </div>
-            <div class="col-4">
-              col 1
-              
-            </div>
-            <div class="col-4 text-end">
-              col 2
-              
-            </div>
-
-            <div class="col-2">
-            </div>
-
-          </div>
-          </div>
+      <section id="about" class="section-grid" aria-labelledby="about-heading">
+        <div>
+          <p class="section-label">01 / The basics</p>
+          <h2 id="about-heading">A little about me</h2>
         </div>
-      </div>
-    </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+        <div class="prompt-card">
+          <p class="section-copy prompt">
+            [Write a few sentences about who you are, where you're from, or
+            what you enjoy doing. Keep it as personal—or as simple—as you like.]
+          </p>
+        </div>
+      </section>
+
+      <section id="interests" class="section-grid" aria-labelledby="interests-heading">
+        <div>
+          <p class="section-label">02 / The good stuff</p>
+          <h2 id="interests-heading">Things I enjoy</h2>
+        </div>
+        <div class="prompt-card">
+          <p class="section-copy prompt">
+            [Add a few interests, favorite activities, or topics you love
+            talking about.]
+          </p>
+        </div>
+      </section>
+
+      <section id="now" class="section-grid" aria-labelledby="now-heading">
+        <div>
+          <p class="section-label">03 / These days</p>
+          <h2 id="now-heading">What I'm exploring</h2>
+        </div>
+        <div class="prompt-card">
+          <p class="section-copy prompt">
+            [Share something you're learning, making, or looking forward to
+            right now.]
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Thanks for stopping by. [Add a sign-off or your preferred contact details.]</p>
+    </footer>
   </body>
 </html>
