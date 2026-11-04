@@ -266,31 +266,37 @@
 <div
 id="myChart" style="width:100%; max-width:500px; height:500px; background-color:black; ">
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
 
 <script>
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
+const xValues = ["Manga", "Anime", "games", "Dog", "Cats"];
+const yValues = [55, 15, 49, 44, 24];
+const barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
 
-function drawChart() {
-
-// Set Data
-const data = google.visualization.arrayToDataTable([
-  ['Contry', 'Mhl'],
-  ['Games',25],
-  ['Manga',50],
-  ['Anime',25],
-]);
-
-// Set Options
-const options = {
-  title:'What Hobbies do I like the most'
-};
-
-// Draw
-const chart = new google.visualization.PieChart(document.getElementById('myChart'));
-chart.draw(data, options);
-
-}
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "World Wide Wine Production 2018"
+    }
+  }
+});
 </script>
           <p class="section-copy prompt">
             [Share something you're learning, making, or looking forward to
