@@ -305,20 +305,23 @@ new Chart("myCharthorror", {
         </div>
         <div class="prompt-card">
 
-<canvas id="myCharthobbies" style="width:100%;max-width:600px height:100%; max-height:900px; "></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
 
 <script>
 const xValues = ["Manga", "Games", "Dog", "Cats", "Anime"];
 const yValues = [55, 49, 44, 24, 15];
 const barColors = [
-  "#ffa500",
-  "#6600ff",
+  "#b91d47",
+  "#00aba9",
   "#2b5797",
-  "#ee82ee",
-  "#3cb371"
+  "#e8c3b9",
+  "#1e7145"
 ];
 
-new Chart("myCharthobbies", {
+new Chart("myChart", {
   type: "pie",
   data: {
     labels: xValues,
@@ -330,7 +333,7 @@ new Chart("myCharthobbies", {
   options: {
     title: {
       display: true,
-      text: "What is the percentage!"
+      text: "World Wide Wine Production 2018"
     }
   }
 });
@@ -343,6 +346,7 @@ new Chart("myCharthobbies", {
             show how much time I would spend on each of them.
           </p>
         </div>
+  
       </section>
     </main>
 
