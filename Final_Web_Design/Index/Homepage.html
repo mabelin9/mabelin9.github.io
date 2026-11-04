@@ -262,17 +262,13 @@
           <h2 id="now-heading">What is the Percentage</h2>
         </div>
         <div class="prompt-card">
-<script src="https://www.gstatic.com/charts/loader.js"></script>
-<div
-id="myChart" style="width:100%; max-width:500px; height:500px; background-color:black; ">
-</div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
 <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
 
 <script>
-const xValues = ["Manga", "Anime", "games", "Dog", "Cats"];
-const yValues = [55, 15, 49, 44, 24];
+const xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+const yValues = [55, 49, 44, 24, 15];
 const barColors = [
   "#b91d47",
   "#00aba9",
@@ -293,7 +289,7 @@ new Chart("myChart", {
   options: {
     title: {
       display: true,
-      text: "What is the Percentage"
+      text: "World Wide Wine Production 2018"
     }
   }
 });
