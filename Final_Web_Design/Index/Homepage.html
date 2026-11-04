@@ -257,41 +257,11 @@
           <h2 id="interests-heading">Things I enjoy</h2>
         </div>
         <div class="prompt-card">
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-
-<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-
-<script>
-const xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-const yValues = [55, 49, 44, 24, 15];
-const barColors = ["red", "green","blue","orange","brown"];
-
-new Chart("myChart", {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    legend: {display: false},
-    title: {
-      display: true,
-      text: "World Wine Production 2018"
-    }
-  }
-});
-</script>
           
-        </div>
-      </div>
-        
-        <p class="section-copy prompt">
+          <p class="section-copy prompt">
             I am also someone who enjoys horror movies and shows
-        </p>
-        
+          </p>
+        </div>
       </section>
 
       <section id="now" class="section-grid" aria-labelledby="now-heading">
@@ -302,7 +272,7 @@ new Chart("myChart", {
         <div class="prompt-card">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
-<canvas id="myCharthobbies" style="width:100%;max-width:600px height:100%; max-height:600px; "></canvas>
+<canvas id="myChart" style="width:100%;max-width:600px height:100%; max-height:900px; "></canvas>
 
 <script>
 const xValues = ["Manga", "Games", "Dog", "Cats", "Anime"];
@@ -315,7 +285,7 @@ const barColors = [
   "#3cb371"
 ];
 
-new Chart("myCharthobbies", {
+new Chart("myChart", {
   type: "pie",
   data: {
     labels: xValues,
