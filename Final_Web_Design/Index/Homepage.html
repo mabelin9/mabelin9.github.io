@@ -258,32 +258,26 @@
         </div>
         <div class="prompt-card">
 
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+          <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<body>
 
-<canvas id="myCharthorror" style="width:100%;max-width:600px"></canvas>
+<div id="myPlot" style="width:100%;max-width:700px"></div>
 
 <script>
-const xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-const yValues = [55, 49, 44, 24, 15];
-const barColors = ["red", "green","blue","orange","brown"];
+const xArray = ["Italy", "France", "Spain", "USA", "Argentina"];
+const yArray = [55, 49, 44, 24, 15];
 
-new Chart("myCharthorror", {
-  type: "bar",
-  data: {
-    labels: "horror movies",
-    datasets: [{
-      backgroundColor: barColors,
-      data: "rating"
-    }]
-  },
-  options: {
-    legend: {display: false},
-    title: {
-      display: true,
-      text: "World Wine Production 2018"
-    }
-  }
-});
+const data = [{
+  x:xArray,
+  y:yArray,
+  type:"bar",
+  orientation:"v",
+  marker: {color:"rgba(0,0,255,0.6)"}
+}];
+
+const layout = {title:"World Wide Wine Production"};
+
+Plotly.newPlot("myPlot", data, layout);
 </script>
           
           
