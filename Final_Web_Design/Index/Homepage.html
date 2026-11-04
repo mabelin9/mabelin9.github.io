@@ -226,7 +226,7 @@
         <p class="hero-copy">
           Hello, my name is Mabelin. Thank you for coming to this website. 
           A little about myself is that I am from Ecuador, I strated living in NY since the age 11 and I have loved it ever since. 
-          Some of my hobbies are Anime, read Manga, I like to game from time to time, and I am also a fan of horror movies.
+          Some of my hobbies are Anime, read Manga and a like to game from time to time
         </p>
         <a class="text-link" href="#about">Get to know me</a>
       </div>
@@ -260,14 +260,14 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
-<canvas id="myChart1" style="width:100%;max-width:600px"></canvas>
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
 
 <script>
-const xValues = ["Clayface", "A Quiet Place", "Conjuring", "Babadook", "Halloween"];
-const yValues = [ 100, 80, 70, 60, 50];
+const xValues = ["Babadook", "Conjuring", "Spain", "USA", "Argentina"];
+const yValues = [55, 49, 44, 24, 15];
 const barColors = ["red", "green","blue","orange","brown"];
 
-new Chart("myChart1", {
+new Chart("myChart", {
   type: "bar",
   data: {
     labels: xValues,
@@ -280,16 +280,16 @@ new Chart("myChart1", {
     legend: {display: false},
     title: {
       display: true,
-      text: "Horror Movie Recommendations"
+      text: "World Wine Production 2018"
     }
   }
 });
 </script>
           
+          <p class="section-copy prompt">
+            I am also someone who enjoys horror movies and shows
+          </p>
         </div>
-        <p class="section-copy prompt">
-            I am also someone who enjoys horror movies this is what I recommend 
-        </p>
       </section>
 
       <section id="now" class="section-grid" aria-labelledby="now-heading">
